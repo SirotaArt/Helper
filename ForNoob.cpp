@@ -59,4 +59,7 @@ int main()
             cout << "\n" << i + 1 << " Группа: " << Group[i] << " ФИО: " << FullName[i] << " Год рождения: " << Data[i] << " Пол: " << Gender[i] << " Оценка по физике: " << PhisMark[i] << " Оценка по Математике: " << MathMark[i] << " Оценка по информатике: " << InfMark[i] << " Стипендия: " << Stipend[i] << "\n";
         }
     }
+
+    system("pause");
+    return 0;
 }
