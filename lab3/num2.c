@@ -23,11 +23,18 @@ double left_rectangles(double a, double b, int n)
 int main() 
 {
     double a, b, E;
-    
-    printf("Введите пределы интегрирования (a и b): ");
-    scanf("%lf %lf", &a, &b);
-    printf("Введите точность (E): ");
-    scanf("%lf", &E);
+
+    if (scanf("%lf %lf", &a, &b) != 2) 
+    {
+        printf("Result: Incorrect input\n");
+        return 1;
+    }
+
+    if (scanf("%lf", &E) != 1) 
+    {
+        printf("Result: Incorrect input\n");
+        return 1;
+    }
 
     int n = 1;
     double current_result, previous_result;
@@ -42,7 +49,7 @@ int main()
 
     } while ((current_result - previous_result) > E*E);
 
-    printf("Последнее вычисленное значение определенного интеграла: %.6lf\n", current_result);
+    printf("%.6lf\n", current_result);
 
     return 0;
 }
